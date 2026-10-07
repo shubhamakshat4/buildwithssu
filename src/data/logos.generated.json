@@ -1,0 +1,266 @@
+{
+  "accenture": {
+    "src": "/logos/accenture.png",
+    "size": 48
+  },
+  "adp": {
+    "src": "/logos/adp.png",
+    "size": 128
+  },
+  "anz": {
+    "src": "/logos/anz.jpg",
+    "size": 128
+  },
+  "aon-hewitt": {
+    "src": "/logos/aon-hewitt.png",
+    "size": 128
+  },
+  "asian-paints": {
+    "src": "/logos/asian-paints.webp",
+    "size": 64
+  },
+  "axis-bank": {
+    "src": "/logos/axis-bank.svg",
+    "size": 128
+  },
+  "bajaj-finance": {
+    "src": "/logos/bajaj-finance.png",
+    "size": 32
+  },
+  "berger": {
+    "src": "/logos/berger.png",
+    "size": 128
+  },
+  "bigbasket": {
+    "src": "/logos/bigbasket.svg",
+    "size": 128
+  },
+  "birla-opus": {
+    "src": "/logos/birla-opus.png",
+    "size": 64
+  },
+  "bluestone": {
+    "src": "/logos/bluestone.png",
+    "size": 128
+  },
+  "bses": {
+    "src": "/logos/bses.png",
+    "size": 120
+  },
+  "byju-s": {
+    "src": "/logos/byju-s.png",
+    "size": 32
+  },
+  "cars24": {
+    "src": "/logos/cars24.png",
+    "size": 64
+  },
+  "cognizant": {
+    "src": "/logos/cognizant.png",
+    "size": 128
+  },
+  "cure-fit": {
+    "src": "/logos/cure-fit.png",
+    "size": 192
+  },
+  "dabur": {
+    "src": "/logos/dabur.png",
+    "size": 48
+  },
+  "deloitte": {
+    "src": "/logos/deloitte.png",
+    "size": 64
+  },
+  "digisol": {
+    "src": "/logos/digisol.png",
+    "size": 128
+  },
+  "digit-insurance": {
+    "src": "/logos/digit-insurance.png",
+    "size": 128
+  },
+  "easemytrip": {
+    "src": "/logos/easemytrip.png",
+    "size": 128
+  },
+  "esaf-bank": {
+    "src": "/logos/esaf-bank.jpg",
+    "size": 128
+  },
+  "ey": {
+    "src": "/logos/ey.png",
+    "size": 32
+  },
+  "forage-deloitte-mastercard-tata": {
+    "src": "/logos/forage-deloitte-mastercard-tata.png",
+    "size": 120
+  },
+  "google-cloud": {
+    "src": "/logos/google-cloud.png",
+    "size": 128
+  },
+  "great-learning": {
+    "src": "/logos/great-learning.png",
+    "size": 128
+  },
+  "hal": {
+    "src": "/logos/hal.png",
+    "size": 174
+  },
+  "hcltech": {
+    "src": "/logos/hcltech.jpg",
+    "size": 128
+  },
+  "hffc": {
+    "src": "/logos/hffc.png",
+    "size": 96
+  },
+  "ibm": {
+    "src": "/logos/ibm.png",
+    "size": 128
+  },
+  "ibm-skillsbuild": {
+    "src": "/logos/ibm-skillsbuild.png",
+    "size": 128
+  },
+  "icici-bank": {
+    "src": "/logos/icici-bank.png",
+    "size": 80
+  },
+  "idfc-first-bank": {
+    "src": "/logos/idfc-first-bank.png",
+    "size": 48
+  },
+  "iesa": {
+    "src": "/logos/iesa.png",
+    "size": 128
+  },
+  "iit-ism-dhanbad": {
+    "src": "/logos/iit-ism-dhanbad.jpg",
+    "size": 84
+  },
+  "incedo": {
+    "src": "/logos/incedo.png",
+    "size": 128
+  },
+  "infosys": {
+    "src": "/logos/infosys.png",
+    "size": 128
+  },
+  "infosys-springboard": {
+    "src": "/logos/infosys-springboard.png",
+    "size": 128
+  },
+  "intel": {
+    "src": "/logos/intel.png",
+    "size": 48
+  },
+  "intellipaat": {
+    "src": "/logos/intellipaat.png",
+    "size": 128
+  },
+  "jm-financial": {
+    "src": "/logos/jm-financial.png",
+    "size": 128
+  },
+  "kpmg": {
+    "src": "/logos/kpmg.png",
+    "size": 128
+  },
+  "landt-edutech": {
+    "src": "/logos/landt-edutech.png",
+    "size": 128
+  },
+  "leadsquared": {
+    "src": "/logos/leadsquared.png",
+    "size": 128
+  },
+  "lenskart": {
+    "src": "/logos/lenskart.png",
+    "size": 128
+  },
+  "livspace": {
+    "src": "/logos/livspace.png",
+    "size": 128
+  },
+  "nalco": {
+    "src": "/logos/nalco.png",
+    "size": 128
+  },
+  "nit-rourkela": {
+    "src": "/logos/nit-rourkela.png",
+    "size": 64
+  },
+  "nobroker": {
+    "src": "/logos/nobroker.png",
+    "size": 64
+  },
+  "oyo": {
+    "src": "/logos/oyo.jpg",
+    "size": 128
+  },
+  "phonepe": {
+    "src": "/logos/phonepe.png",
+    "size": 128
+  },
+  "pwc": {
+    "src": "/logos/pwc.png",
+    "size": 128
+  },
+  "reliance-retail": {
+    "src": "/logos/reliance-retail.png",
+    "size": 128
+  },
+  "sandp-global": {
+    "src": "/logos/sandp-global.png",
+    "size": 128
+  },
+  "stanza-living": {
+    "src": "/logos/stanza-living.png",
+    "size": 48
+  },
+  "swiggy": {
+    "src": "/logos/swiggy.png",
+    "size": 128
+  },
+  "tcs": {
+    "src": "/logos/tcs.png",
+    "size": 48
+  },
+  "tcs-ion": {
+    "src": "/logos/tcs-ion.svg",
+    "size": 128
+  },
+  "tech-mahindra": {
+    "src": "/logos/tech-mahindra.png",
+    "size": 128
+  },
+  "unacademy": {
+    "src": "/logos/unacademy.png",
+    "size": 128
+  },
+  "upgrad": {
+    "src": "/logos/upgrad.png",
+    "size": 64
+  },
+  "urban-company": {
+    "src": "/logos/urban-company.jpg",
+    "size": 128
+  },
+  "vedantu": {
+    "src": "/logos/vedantu.png",
+    "size": 128
+  },
+  "zerodha": {
+    "src": "/logos/zerodha.png",
+    "size": 48
+  },
+  "zidio": {
+    "src": "/logos/zidio.png",
+    "size": 48
+  },
+  "zomato": {
+    "src": "/logos/zomato.png",
+    "size": 128
+  }
+}

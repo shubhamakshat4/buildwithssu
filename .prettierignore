@@ -1,0 +1,4 @@
+.next
+node_modules
+package-lock.json
+scripts/google-apps-script

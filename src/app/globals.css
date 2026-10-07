@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+:root {
+  --ssu-maroon: #6e0f1f;
+  --ssu-maroon-deep: #4a0a15;
+  --ssu-gold: #c9a227;
+  --ssu-gold-light: #e8cf7a;
+  --ssu-cream: #fff8e7;
+  --ssu-ink: #1a1216;
+  --ssu-slate: #2b2430;
+  --tech-cyan: #35d0c6;
+}
+
+@theme inline {
+  --color-ssu-maroon: var(--ssu-maroon);
+  --color-ssu-maroon-deep: var(--ssu-maroon-deep);
+  --color-ssu-gold: var(--ssu-gold);
+  --color-ssu-gold-light: var(--ssu-gold-light);
+  --color-ssu-cream: var(--ssu-cream);
+  --color-ssu-ink: var(--ssu-ink);
+  --color-ssu-slate: var(--ssu-slate);
+  --color-tech-cyan: var(--tech-cyan);
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--ssu-cream);
+    color: var(--ssu-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--ssu-gold);
+    color: var(--ssu-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ssu-gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-x {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 7rem;
+    }
+  }
+
+  /* Cards: 1px gold/10% border, hover lift + glow */
+  .card-dark {
+    border-radius: 1rem;
+    border: 1px solid color-mix(in oklab, var(--ssu-gold) 14%, transparent);
+    background: color-mix(in oklab, var(--ssu-slate) 55%, transparent);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+  .card-dark:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--ssu-gold) 40%, transparent);
+    box-shadow:
+      0 20px 40px -20px rgb(0 0 0 / 0.6),
+      0 0 0 1px color-mix(in oklab, var(--ssu-gold) 15%, transparent),
+      0 0 40px -10px color-mix(in oklab, var(--ssu-gold) 35%, transparent);
+  }
+  .card-light {
+    border-radius: 1rem;
+    border: 1px solid color-mix(in oklab, var(--ssu-gold) 22%, transparent);
+    background: #fffdf6;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+  .card-light:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--ssu-gold) 55%, transparent);
+    box-shadow: 0 22px 40px -24px color-mix(in oklab, var(--ssu-maroon) 45%, transparent);
+  }
+
+  .gold-text {
+    background: linear-gradient(
+      100deg,
+      #b98f17 0%,
+      var(--ssu-gold-light) 45%,
+      var(--ssu-gold) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Animated gold grid for tech sections */
+  .bg-grid {
+    background-image:
+      linear-gradient(color-mix(in oklab, var(--ssu-gold) 9%, transparent) 1px, transparent 1px),
+      linear-gradient(
+        90deg,
+        color-mix(in oklab, var(--ssu-gold) 9%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 100%);
+  }
+  .bg-grid-animated {
+    animation: grid-pan 40s linear infinite;
+  }
+  .bg-dots {
+    background-image: radial-gradient(
+      color-mix(in oklab, var(--ssu-maroon) 14%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  .marquee {
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 45s) linear infinite;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 9999px;
+    background: var(--ssu-gold-light);
+    animation: drift var(--dur, 18s) ease-in-out infinite alternate;
+  }
+}
+
+/* Tool logos orbiting the hero visual; each chip counter-rotates to stay upright. */
+.orbit {
+  animation: orbit 80s linear infinite;
+}
+.orbit-counter {
+  animation: orbit 80s linear infinite reverse;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}
+
+/* Hero entrance: pure CSS so the LCP headline paints before hydration. */
+.hero-in {
+  animation: hero-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@keyframes grid-pan {
+  to {
+    background-position: 56px 56px;
+  }
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(var(--dx, 30px), var(--dy, -40px), 0);
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .bg-grid-animated,
+  .marquee-track,
+  .particle,
+  .hero-in,
+  .orbit,
+  .orbit-counter {
+    animation: none !important;
+  }
+  .marquee-track {
+    flex-wrap: wrap;
+    width: auto;
+    row-gap: 0.5rem;
+  }
+  .marquee-track > [aria-hidden="true"] {
+    display: none;
+  }
+  .marquee {
+    mask-image: none;
+  }
+  .card-dark:hover,
+  .card-light:hover {
+    transform: none;
+  }
+}
