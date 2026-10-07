@@ -1,10 +1,14 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Build with SSU — Faculty of Engineering & Technology, Sri Sri University";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const file = await readFile(path.join(process.cwd(), "public/logo-ssu-512.png"));
+  const crest = `data:image/png;base64,${file.toString("base64")}`;
   return new ImageResponse(
     <div
       style={{
@@ -32,22 +36,8 @@ export default function OpengraphImage() {
         }}
       />
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-        <div
-          style={{
-            width: 72,
-            height: 72,
-            borderRadius: 36,
-            background: "#C9A227",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#6E0F1F",
-            fontSize: 30,
-            fontWeight: 700,
-          }}
-        >
-          SSU
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- next/og renders plain <img> */}
+        <img src={crest} width={96} height={96} alt="" style={{ borderRadius: 48 }} />
         <div
           style={{
             display: "flex",

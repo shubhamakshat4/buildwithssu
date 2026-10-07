@@ -96,7 +96,7 @@ Either fill `FET_FACULTY_COORDINATOR_DEFAULT` in `src/data/team.ts`, or set `FET
 
 See [`public/README-assets.md`](public/README-assets.md). In short:
 
-- Official crest: add `public/logo-ssu.png`, then set `logoSrc` in `site.ts`.
+- Official crest: already in place (`public/logo-ssu.png`, 128px, and `public/logo-ssu-512.png` for link previews), taken from srisriuniversity.edu.in. To update it, replace both files.
 - Campus photo: add `public/campus-hero.jpg`, then set `heroImage` in `site.ts`.
 
 ### Company logos

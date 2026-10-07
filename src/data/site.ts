@@ -15,8 +15,8 @@ export const SITE = {
     "",
   ),
   universityUrl: "https://srisriuniversity.edu.in",
-  /** Swap to "/logo-ssu.png" after dropping the official logo into /public. */
-  logoSrc: "/logo-ssu.svg",
+  /** Official SSU crest (128px). A 512px version, /logo-ssu-512.png, is used for link previews. */
+  logoSrc: "/logo-ssu.png",
   /** Optional campus photo shown faintly behind the hero, e.g. "/campus-hero.jpg". null = none. */
   heroImage: null as string | null,
   /** Shown when the Sheets webhook is down. */

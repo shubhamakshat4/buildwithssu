@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "industry academia collaboration",
   ],
   applicationName: SITE.name,
-  icons: { icon: SITE.logoSrc },
+  icons: { icon: SITE.logoSrc, apple: "/logo-ssu-512.png" },
   openGraph: {
     type: "website",
     siteName: SITE.name,
